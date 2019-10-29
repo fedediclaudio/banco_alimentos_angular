@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="newOrganizacionForm">
+    <div class="form-group">
+        <label for="ogRazonSocial">Razon social:</label>
+        <input type="text" formControlName="orgRazonSocial" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="ogRazonSocial">Cuil:</label>
+        <input type="text" formControlName="orgCuil" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="ogRazonSocial">Direccion:</label>
+        <input type="text" formControlName="orgDireccion" class="form-control">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Guardar</button>
+        <a routerLink="/home" class="btn btn-link">Cancelar</a>
+    </div>
+</form>

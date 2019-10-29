@@ -1,0 +1,24 @@
+<div class="content">
+    <!-- LISTADO ORGANIZACIONES -->
+    <div class="row justify-content-md-center">
+        <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let og of organizaciones; let idx=index" >
+            <div>
+                <span>Razon Social: {{og.razonSocial}}</span><br>
+                <span>CUIL: {{og.cuil}}</span><br>
+                <span>Direccion: {{og.direccion}}</span>
+            </div> 
+            <div class="pull-right">
+                <button class="btn btn-primary btn-xs fa fa-pencil" [routerLink]="['/modify-organizacion-donante',idx]"></button>
+                <button class="btn btn-danger btn-xs fa fa-trash-o" (click)="onRemove(og)"></button>
+            </div>
+        </li>
+        </ul>
+    </div>
+    <!-- NUEVA ORGANIZACION -->
+    <div class="row justify-content-md-center">
+        <nav>
+            <a routerLink="/new-organizacion-donante" class="pull-right">New item</a>
+        </nav>
+    </div>
+</div>
