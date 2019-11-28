@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
-import { OrganizacionDonante } from 'src/model/organizacionDonante';
+import { AbstractOrganizacionDonanteService } from './abstract-organizacion-donante.service';
+import { OrganizacionDonante } from '../../lbservice/models/OrganizacionDonante';
+@Injectable({
+  providedIn: 'root'
+})
+export class MockOrganizacionDonanteService extends AbstractOrganizacionDonanteService {
 
-@Injectable({ providedIn: 'root' })
-export class DataService {
-    
   organizaciones:OrganizacionDonante[]
 
   constructor() {
+    super();
     this.organizaciones = []
   }
  
-  getOrganizacionesDonantes(){
-    return this.organizaciones
-  }
+  getOrganizacionesDonantes():OrganizacionDonante{};
+   // return this.organizaciones
+  //}
 
   getOrganizacionDonanteByIdx(idx:number) {
     return this.organizaciones[idx];
@@ -27,4 +30,5 @@ export class DataService {
     this.organizaciones = this.organizaciones.filter((i)=>organizacion!==i)
     // console.log(this.organizaciones)
   }
+  
 }
