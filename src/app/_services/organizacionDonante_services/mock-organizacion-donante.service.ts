@@ -13,10 +13,12 @@ export class MockOrganizacionDonanteService extends AbstractOrganizacionDonanteS
     this.organizaciones = []
   }
  
-  getOrganizacionesDonantes():OrganizacionDonante{};
-   // return this.organizaciones
-  //}
-
+  getOrganizacionesDonantes():Promise<OrganizacionDonante[]>{
+    return new Promise((resolve) => {
+      resolve(this.organizaciones);
+      });
+  };
+  
   getOrganizacionDonanteByIdx(idx:number) {
     return this.organizaciones[idx];
   }

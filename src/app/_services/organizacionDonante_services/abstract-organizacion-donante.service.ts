@@ -3,9 +3,9 @@ import { OrganizacionDonante } from '../../lbservice/models/OrganizacionDonante'
 @Injectable({
   providedIn: 'root'
 })
-export class AbstractOrganizacionDonanteService {
+abstract class AbstractOrganizacionDonanteService {
 
   constructor() { }
   
-  abstract getOrganizacionesDonantes():Promise<OrganizacionDonante[]>
+  abstract getOrganizacionesDonantes(): Promise<OrganizacionDonante[]>;
 }
