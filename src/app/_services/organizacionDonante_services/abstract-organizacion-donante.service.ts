@@ -3,7 +3,7 @@ import { OrganizacionDonante } from '../../lbservice/models/OrganizacionDonante'
 @Injectable({
   providedIn: 'root'
 })
-abstract class AbstractOrganizacionDonanteService {
+export abstract class AbstractOrganizacionDonanteService {
 
   constructor() { }
   
