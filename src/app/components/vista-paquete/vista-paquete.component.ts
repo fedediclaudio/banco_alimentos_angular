@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Paquete, Producto } from 'src/app/lbservice';
 
 @Component({
   selector: 'app-vista-paquete',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaPaqueteComponent implements OnInit {
 
+  pakage:Paquete;
+  productos:Producto[];
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
 
 }

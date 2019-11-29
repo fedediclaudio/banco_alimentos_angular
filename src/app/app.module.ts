@@ -16,6 +16,9 @@ import { VistaInsigniaComponent } from './components/vista-insignia/vista-insign
 import { VistaPaqueteComponent } from './components/vista-paquete/vista-paquete.component';
 import { VistaProductoComponent } from './components/vista-producto/vista-producto.component';
 import { VistaVehiculoComponent } from './components/vista-vehiculo/vista-vehiculo.component';
+import { ListaBultosComponent } from './components/lista-bultos/lista-bultos.component';
+import { ListaPaquetesComponent } from './components/lista-paquetes/lista-paquetes.component';
+import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { VistaVehiculoComponent } from './components/vista-vehiculo/vista-vehicu
     VistaPaqueteComponent,
     VistaProductoComponent,
     VistaVehiculoComponent,
+    ListaBultosComponent,
+    ListaPaquetesComponent,
+    ListaProductosComponent,
   ],
   imports: [
     BrowserModule,

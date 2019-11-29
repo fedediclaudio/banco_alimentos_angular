@@ -1,0 +1,24 @@
+<p>lista-productos works!</p>
+<div class="content">
+        <!-- LIST OF ITEMS -->
+        <div class="row justify-content-md-center">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action" *ngFor="let product of products" >
+                    <span>{{product.name}}</span> 
+                    <span class="badge">{{product.creationDate | date}}</span>
+                        <div class="pull-right">
+                            <button class="btn btn-primary btn-xs fa fa-pencil" (click)="selectProduct(product)"></button>
+                            <button class="btn btn-primary btn-xs fa fa-pencil" [routerLink]="['/edit-product',idx]"></button>
+                            <button class="btn btn-danger btn-xs fa fa-trash-o" (click)="removeProduct(product)"></button>
+                        </div>
+                </li>
+            </ul>
+        </div>
+       
+        <!-- NEW ITEM -->
+        <div class="row justify-content-md-center">
+            <nav>
+                <a routerLink="/new-product" class="pull-right">Nuevo Producto</a>
+            </nav>
+        </div>
+    </div>

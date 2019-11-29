@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Bulto, Producto } from 'src/app/lbservice';
 
 @Component({
   selector: 'app-vista-bulto',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaBultoComponent implements OnInit {
 
+  products:Producto[];
+  bulto:Bulto;
+
   constructor() { }
 
   ngOnInit() {
+    
   }
+
+  getProducts(){}
+
+  removeBulto(){}
 
 }
