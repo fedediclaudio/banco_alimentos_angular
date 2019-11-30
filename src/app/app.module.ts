@@ -10,7 +10,6 @@ import { VistaBultoProductoPaqueteComponent } from './components/vista-bulto-pro
 import { VistaVoluntarioComponent } from './components/vista-voluntario/vista-voluntario.component';
 import { VistaContactoComponent } from './components/vista-contacto/vista-contacto.component';
 import { VistaBultoComponent } from './components/vista-bulto/vista-bulto.component';
-import { VistaCategoriaVoluntarioComponent } from './components/vista-categoria-voluntario/vista-categoria-voluntario.component';
 import { VistaEnvioComponent } from './components/vista-envio/vista-envio.component';
 import { VistaInsigniaComponent } from './components/vista-insignia/vista-insignia.component';
 import { VistaPaqueteComponent } from './components/vista-paquete/vista-paquete.component';
@@ -19,6 +18,7 @@ import { VistaVehiculoComponent } from './components/vista-vehiculo/vista-vehicu
 import { ListaBultosComponent } from './components/lista-bultos/lista-bultos.component';
 import { ListaPaquetesComponent } from './components/lista-paquetes/lista-paquetes.component';
 import { ListaProductosComponent } from './components/lista-productos/lista-productos.component';
+import { InformacionGeneralBultoComponent } from './components/creacion-bulto/informacion-general-bulto/informacion-general-bulto.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,6 @@ import { ListaProductosComponent } from './components/lista-productos/lista-prod
     VistaVoluntarioComponent,
     VistaContactoComponent,
     VistaBultoComponent,
-    VistaCategoriaVoluntarioComponent,
     VistaEnvioComponent,
     VistaInsigniaComponent,
     VistaPaqueteComponent,
@@ -38,6 +37,7 @@ import { ListaProductosComponent } from './components/lista-productos/lista-prod
     ListaBultosComponent,
     ListaPaquetesComponent,
     ListaProductosComponent,
+    InformacionGeneralBultoComponent,
   ],
   imports: [
     BrowserModule,
