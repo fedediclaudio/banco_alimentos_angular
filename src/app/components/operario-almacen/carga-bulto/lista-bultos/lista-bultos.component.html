@@ -1,0 +1,51 @@
+<p>lista-bultos works!</p>
+
+    <!-- 
+        Este componente tiene una lista de bultos de los cuales a simple vista solo se verá un 
+        la organizacion donante y la fecha de carga. A traves de este componente se puede
+        realizar las siguientes acciones:
+            
+        -Efectivizar la donacion: te redirige a un nuevo componente para armar los paquetes. 
+        -Por cada bulto se permite: ver detalles, editar (añadir detalles nuevos o editar paquetes) y eliminar.
+
+        
+        Sugerencias:
+
+        1) Cuando quiero ver un bulto de la lista, presionar un boton con el simbolo de un "ojito" 
+        y se abrirá una ventana emergente que permite visualizar los datos dentro del componente 
+        2) Si quiero editar un bulto sería mejor hacer lo mismo, es decir, editarlo en una ventana
+        emergente sin necesidad de cambiar de componente ?
+
+        Dudas:
+
+        1) Se puede eliminar un bulto ?
+
+    -->
+
+
+
+
+<div class="content">
+        <!-- LIST OF ITEMS -->
+        <div class="row justify-content-md-center">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-action" *ngFor="let bulto of bultos" >
+                    <span>{{bulto.name}}</span> 
+                    <span class="badge">{{product.creationDate | date}}</span>
+                        <div class="pull-right">
+                            <button class="btn btn-primary btn-xs fa fa-eye" (click)="verBulto(bulto)"></button> <!-- Para que es esta linea? -->
+                            <button class="btn btn-primary btn-xs fa fa-pencil" [routerLink]="['/editar-bulto',idx]"></button>
+                            <button class="btn btn-danger btn-xs fa fa-trash-o" (click)="removerBulto(bulto)"></button>
+                        </div>
+                </li>
+            </ul>
+        </div>
+       
+        <!-- NEW ITEM -->
+        <div class="row justify-content-md-center">
+            <nav>
+                <a routerLink="/nuevo-bulto" class="pull-right">Nuevo Bulto</a>
+            </nav>
+        </div>
+    </div>
+
